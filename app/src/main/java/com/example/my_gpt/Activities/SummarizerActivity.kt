@@ -144,7 +144,7 @@ class SummarizerActivity : AppCompatActivity() {
 
         val call = apiService.getSummary(
             url = url,
-            apiKey = "6199e24496msh4ba9d031fa24763p12cd8ejsn665804ca23a4"
+            apiKey = "619####################################a4"
         )
 
         call.enqueue(object : Callback<SummaryResponse> {
