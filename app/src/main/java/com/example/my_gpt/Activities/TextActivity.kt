@@ -33,7 +33,7 @@ class TextActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTextBinding
     private lateinit var historyAdapter: HistoryAdapter
     private val historyItems = mutableListOf<String>()
-    val ApiKey = "AIzaSyC9vE2p1loRXRv2xItQzNwQ3A9nZhBvOVA"
+    val ApiKey = "AI#############################VA"
     private var responseText: String? = null
     private val conversationHistory = mutableListOf<String>()  // To maintain context
 
