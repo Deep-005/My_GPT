@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".Activities.FAQActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_width="350dp"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.285"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/support" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:text="@string/question"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:fontFamily="@font/five"
+        android:textColor="#F3B252"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        android:text="@string/answers"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.075" />
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ask"
+        android:textColorHint="@color/black"
+        android:background="@drawable/sum_text"
+        android:paddingVertical="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:inputType="text"
+        android:singleLine="true"
+        android:layout_marginHorizontal="@dimen/_15sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.158"
+        android:autofillHints="no" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input"
+        app:layout_constraintVertical_bias="0.015"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/faq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="5dp"
+        android:text="@string/faq"
+        android:textColor="#0770C3"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/eleven"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="285dp"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:scrollbars="vertical"
+        android:scrollbarThumbVertical="@drawable/scroll"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/faq"
+        app:layout_constraintVertical_bias="0.0">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:paddingHorizontal="15dp"
+           android:paddingTop="5dp"
+           android:orientation="vertical">
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/q1"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:cardElevation="10dp"
+               app:cardCornerRadius="10dp"
+               android:layout_marginBottom="15dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:paddingEnd="10dp"
+                   android:paddingStart="10dp"
+                   android:textColor="@color/black"
+                   android:text="@string/one"/>
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/q2"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:cardElevation="10dp"
+               app:cardCornerRadius="10dp"
+               android:layout_marginBottom="15dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:paddingEnd="10dp"
+                   android:paddingStart="10dp"
+                   android:textColor="@color/black"
+                   android:text="@string/two"/>
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/q3"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:cardElevation="10dp"
+               app:cardCornerRadius="10dp"
+               android:layout_marginBottom="15dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:paddingEnd="10dp"
+                   android:paddingStart="10dp"
+                   android:textColor="@color/black"
+                   android:text="@string/three"/>
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/q4"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:cardElevation="10dp"
+               app:cardCornerRadius="10dp"
+               android:layout_marginBottom="15dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:paddingEnd="10dp"
+                   android:paddingStart="10dp"
+                   android:textColor="@color/black"
+                   android:text="@string/four"/>
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/q5"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:cardElevation="10dp"
+               app:cardCornerRadius="10dp"
+               android:layout_marginBottom="15dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:paddingEnd="10dp"
+                   android:paddingStart="10dp"
+                   android:textColor="@color/black"
+                   android:text="@string/five"/>
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/q6"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:cardElevation="10dp"
+               app:cardCornerRadius="10dp"
+               android:layout_marginBottom="15dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:paddingEnd="10dp"
+                   android:paddingStart="10dp"
+                   android:textColor="@color/black"
+                   android:text="@string/six"/>
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/q7"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:cardElevation="10dp"
+               app:cardCornerRadius="10dp"
+               android:layout_marginBottom="15dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:paddingEnd="10dp"
+                   android:paddingStart="10dp"
+                   android:textColor="@color/black"
+                   android:text="@string/seven"/>
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/q8"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:cardElevation="10dp"
+               app:cardCornerRadius="10dp"
+               android:layout_marginBottom="15dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:paddingEnd="10dp"
+                   android:paddingStart="10dp"
+                   android:textColor="@color/black"
+                   android:text="@string/eight"/>
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/q9"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:cardElevation="10dp"
+               app:cardCornerRadius="10dp"
+               android:layout_marginBottom="15dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:paddingEnd="10dp"
+                   android:paddingStart="10dp"
+                   android:textColor="@color/black"
+                   android:text="@string/nine"/>
+
+           </androidx.cardview.widget.CardView>
+
+           <androidx.cardview.widget.CardView
+               android:id="@+id/q10"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:cardElevation="10dp"
+               app:cardCornerRadius="10dp"
+               android:layout_marginBottom="15dp">
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingTop="10dp"
+                   android:paddingBottom="10dp"
+                   android:paddingEnd="10dp"
+                   android:paddingStart="10dp"
+                   android:textColor="@color/black"
+                   android:text="@string/ten"/>
+
+           </androidx.cardview.widget.CardView>
+
+       </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

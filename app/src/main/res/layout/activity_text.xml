@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.TextActivity"
+    android:background="@drawable/background">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.007"
+        android:paddingHorizontal="20dp">
+
+        <ImageView
+            android:id="@+id/backToDash"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/back_btn"
+            android:contentDescription="@string/back" />
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/backToDash"
+            android:text="@string/text_generator"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp" />
+
+        <ImageView
+            android:id="@+id/dots"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/dots"
+            android:contentDescription="@string/dots" />
+
+        <RelativeLayout
+            android:id="@+id/options"
+            android:layout_toEndOf="@id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/option_box"
+            android:paddingHorizontal="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/history"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:layout_marginBottom="3dp"/>
+
+            <TextView
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/history"
+                android:text="@string/clear"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:layout_marginBottom="3dp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingBottom="130dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/search_tray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/data_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="10dp">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="430dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="5dp"
+        android:rowCount="2"
+        android:columnCount="2"
+        android:visibility="visible">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="#FBFBFB"
+            app:cardElevation="12dp">
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card1"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:layout_marginTop="20dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/bulb"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="15dp"
+                android:padding="5dp"
+                android:background="@drawable/card_icon_bg"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="#02518F"
+            app:cardElevation="12dp">
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card2"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:layout_marginTop="20dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/message"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="15dp"
+                android:padding="5dp"
+                android:background="@drawable/card_icon_bg"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card3"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="#02518F"
+            app:cardElevation="12dp">
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card3"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:layout_marginTop="20dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/code"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="15dp"
+                android:padding="5dp"
+                android:background="@drawable/card_icon_bg"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card4"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="#FEFFFF"
+            app:cardElevation="12dp">
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/card4"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:layout_marginTop="20dp"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/compass"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="15dp"
+                android:padding="5dp"
+                android:background="@drawable/card_icon_bg"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/search_tray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/searchbar"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.952"
+        android:layout_marginBottom="10dp"
+        android:paddingHorizontal="18dp">
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/prompt"
+            android:padding="15dp"
+            android:singleLine="false"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:autofillHints="no"
+            android:inputType="text"/>
+
+        <ImageView
+            android:id="@+id/send"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/send"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="12.5dp"
+            android:contentDescription="@string/send" />
+
+<!--        <ImageView-->
+<!--            android:id="@+id/mic"-->
+<!--            android:layout_width="25dp"-->
+<!--            android:layout_height="25dp"-->
+<!--            android:layout_marginStart="-55dp"-->
+<!--            android:src="@drawable/mic"-->
+<!--            android:layout_marginTop="13dp"-->
+<!--            android:contentDescription="@string/send" />-->
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

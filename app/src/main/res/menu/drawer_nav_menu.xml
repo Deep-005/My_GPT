@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/item1"
+        android:title="@string/text" />
+
+    <item android:id="@+id/item2"
+        android:title="@string/img"/>
+
+    <item android:id="@+id/item3"
+        android:title="@string/summarizer"/>
+
+    <item android:id="@+id/item4"
+        android:title="@string/faq_s"/>
+
+    <item android:id="@+id/item5"
+        android:title="@string/feedback" />
+
+    <item android:id="@+id/item6"
+        android:title="@string/exit" />
+
+    <item android:id="@+id/item7"
+        android:title="@string/logout"/>
+
+</menu>

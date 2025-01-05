@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "249254197276",
+    "project_id": "my-gpt-a8dbd",
+    "storage_bucket": "my-gpt-a8dbd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249254197276:android:831444e475227ddeea87d9",
+        "android_client_info": {
+          "package_name": "com.example.my_gpt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB43jHmvigR1u-oaiNthu_BGeWvVeR5xK4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:name=".Application.Global"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Base.Theme.My_gpt"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activities.OfflineActivity"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".Activities.LogoutActivity"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".Activities.RegisterActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.My_gpt"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.My_gpt"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".Activities.FAQActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.My_gpt2"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".Activities.ImageActivity"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".Activities.SummarizerActivity"
+            android:exported="false"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".Activities.FeedbackActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.My_gpt2"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".Activities.DashActivity"
+            android:exported="false"
+            android:theme="@style/Base.Theme.My_gpt2"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.TextActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible"
+            tools:ignore="LockedOrientationActivity" />
+    </application>
+
+</manifest>
